@@ -24,8 +24,8 @@ RSpec.describe Pharmacy, type: :model do
           expect(@pharmacy).not_to be_valid
         end
 
-        it 'is invalid without gps' do
-          @pharmacy.gps = nil
+        it 'is invalid without longtitude' do
+          @pharmacy.longtitude = nil
           expect(@pharmacy).not_to be_valid
         end
 
@@ -34,14 +34,6 @@ RSpec.describe Pharmacy, type: :model do
           expect(@pharmacy).not_to be_valid
         end
 
-        # it 'is invalid without user_id' do
-        #   @expence.user_id = nil
-        #   expect(@expence).not_to be_valid
-        # end
-        # it 'is invalid without correct user_id' do
-        #   @expence.user_id = '999'
-        #   expect(@expence).not_to be_valid
-        # end
       end
     end
 
