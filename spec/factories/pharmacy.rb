@@ -7,7 +7,7 @@ FactoryBot.define do
     city { 'Tbilisi' }
     address { '9 march 2' }
     phone { '11-22-33' }
-    # lattitude { 41.705376}
+    latitude { 41.705376}
     longtitude { 44.789290 }
     created_at  { 1.years.ago }
     updated_at  { 1.years.ago }
