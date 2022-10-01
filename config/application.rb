@@ -14,7 +14,7 @@ module Tabletka
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-    config.i18n.available_locales = %i[en ru]
-    config.i18n.default_locale = :ru
+    config.i18n.available_locales = %i[en ru ge]
+    config.i18n.default_locale = :ge
   end
 end
