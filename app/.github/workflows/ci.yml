@@ -1,25 +1,24 @@
-name: ci
-  on:
-    - push
-    - pull-request
+name: CI
+on: [push,pull_request]
 jobs:
-  test:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest]
-        ruby:
-          - 2.7
-          - '3.0'
-    runs-on: ${{matrix.os}}
+  rubocop-test:
+    name: Rubocop
+    runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v2
-      - name: set up ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: ${{matrix.ruby}}
-          bundler-cache: true
-      - run: bundle exec rake rspec
-
-
-
+      - uses: actions/checkout@v1
+      - uses: ruby/setup-ruby@v1
+      - name: Install Rubocop
+        run: bundle
+      - name: Check code
+        run: bundle exec rubocop
+  rspec-test:
+    name: Rspec
+    needs: rubocop-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ruby/setup-ruby@v1
+      - name: Install RSpec
+        run: bundle
+      - name: Run tests
+        run: bundle exec rspec -fd
