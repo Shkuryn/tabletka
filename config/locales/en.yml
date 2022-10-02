@@ -1,0 +1,12 @@
+
+en:
+  users:
+    edit:
+      title: Edit user
+  pharmacies:
+    index:
+      pharmacies: Pharmacies
+      title: Title
+      city: City
+      phone: Phone
+      address: address

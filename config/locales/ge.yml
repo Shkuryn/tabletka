@@ -1,0 +1,12 @@
+
+ge:
+  users:
+    edit:
+      title: მომხმარებლის რედაქტირება
+  pharmacies:
+    index:
+      pharmacies: აფთიაქები
+      title: სათაური
+      city: ქალაქი
+      phone: ტელეფონი
+      address: მისამართი

@@ -1,0 +1,12 @@
+ru:
+  users:
+    edit:
+      title: Редактирование пользователя
+  pharmacies:
+    index:
+      pharmacies: Аптеки
+      title: Название
+      city: Город
+      phone: Телефон
+      address: Адрес
+
